@@ -1,0 +1,188 @@
+@font-face
+{
+    font-family: Oleo Script;
+    src: url(./assets/fonts/oleo_script/oleoscript-regular.ttf);
+}
+
+@font-face
+{
+    font-family: Space Grotesk;
+    src: url(./assets/fonts/space_grotesk/space_grotesk-variable_font_wght.ttf);
+}
+
+.App
+{
+    max-width: 1800px;
+    margin: auto;
+}
+
+/* Navigation styles */
+
+.navbar
+{
+    padding: 2.05% 8.68%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #C4C4C4;
+}
+
+.navbar h1
+{
+    font-size: 1.5625em;
+    font-family: 'Oleo Script', cursive;
+    font-weight: 400;
+    margin: 0;
+}
+
+.navbar #hamburger
+{
+    display: none;
+}
+
+.navbar a
+{
+    padding: 10px;
+    display: block;
+    text-decoration: none;
+    color: inherit;
+}
+
+ul.nav-links
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    list-style-type: none;
+    padding: 0px;
+    margin: 0;
+}
+
+ul.nav-links li
+{
+    font-weight: 400;
+    font-family: 'Space Grotesk';
+}
+
+ul.nav-links li a:hover
+{
+    color: #2549D3;
+}
+
+ul.nav-links li a.active
+{
+    color: #2549D3;
+    font-weight: 700;
+}
+
+.navbar button
+{
+    padding: 0px;
+    border: none;
+    background-color: #2549D3;
+    border-radius: 10px;
+}
+
+.navbar button a
+{
+    font-family: 'Space Grotesk';
+    color: #fff;
+}
+
+@media only screen and (max-width: 920px)
+{
+
+    /* Navigation */
+    #topmenu.navbar
+    {
+        position: sticky;
+        top: 0;
+        display: block;
+        max-height: 59px;
+        overflow: hidden;
+        transition: max-height 0.3s cubic-bezier(0.39, 0.575, 0.565, 1);
+    }
+
+    #topmenu.open
+    {
+        max-height: 1000px;
+    }
+
+    .navbar h1
+    {
+        display: inline-block;
+    }
+
+    .navbar #hamburger
+    {
+        display: inline-block;
+        width: 20px;
+        height: 20px;
+        position: fixed;
+        right: 8.68%;
+        margin-top: 7.5px;
+    }
+
+    #hamburger>div
+    {
+        width: 100%;
+        height: 4px;
+        border-radius: 7px;
+        background-color: #2549D3;
+        position: absolute;
+        right: 0;
+        transition: transform 0.5s;
+    }
+
+    #hamburger .top
+    {
+        top: 0;
+    }
+
+    #hamburger .mid
+    {
+        top: 40%;
+    }
+
+    #hamburger .bottom
+    {
+        bottom: 0;
+    }
+
+    #hamburger.open .top
+    {
+        transform: translateY(7.5px) translateX(0px) rotate(-45deg);
+    }
+
+    #hamburger.open .mid
+    {
+        display: none;
+    }
+
+    #hamburger.open .bottom
+    {
+        transform: translateY(-8.5px) translateX(0px) rotate(45deg);
+    }
+
+    .navbar a
+    {
+        padding: 5px;
+        font-size: smaller;
+    }
+
+    ul.nav-links
+    {
+        flex-direction: column;
+        align-items: flex-end;
+        margin-top: 8px;
+    }
+
+    .navbar button
+    {
+        display: block;
+        margin: auto;
+        margin-right: 0px;
+        border-radius: 5px;
+    }
+}
