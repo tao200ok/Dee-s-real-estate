@@ -32,6 +32,8 @@ button
 {
     border: none;
     background-color: #2549D3;
+    color: #FFF;
+    font-family: 'Space Grotesk', sans-serif;
 }
 
 a
@@ -106,10 +108,6 @@ ul.nav-links li a.active
     border-radius: 5px;
 }
 
-.navbar button a
-{
-    color: #fff;
-}
 
 /* Hero section */
 #home
@@ -158,12 +156,6 @@ ul.nav-links li a.active
     box-shadow: 24px 24px 48px 0px #00000050;
 }
 
-.intro button a
-{
-    color: #fff;
-
-}
-
 .intro .play_button
 {
     display: flex;
@@ -175,6 +167,11 @@ ul.nav-links li a.active
     border-radius: 50%;
     background-color: #0F298B;
     box-shadow: 24px 24px 48px 0px #00000050;
+}
+
+.intro .play_button img
+{
+    padding: 10px;
 }
 
 .hero_image
@@ -264,10 +261,8 @@ ul.nav-links li a.active
     display: flex;
     justify-content: center;
     align-items: center;
-    font-family: 'space grotesk', sans-serif;
     padding: 5px;
     border-radius: 5px;
-    color: #fff;
 }
 
 .search_container button img
@@ -276,10 +271,79 @@ ul.nav-links li a.active
     height: auto;
 }
 
-.search_container button span {
+.search_container button span
+{
     padding: 2.5px;
 }
 
+/* Main content */
+
+section.content
+{
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0px 8.68% 0px 8.68%;
+}
+
+/* How it works */
+
+#how_it_works
+{
+    margin: 6.5% 0px 0px 0px;
+    text-align: center;
+}
+
+#how_it_works h2
+{
+    font-size: 24px;
+    color: #0F298B;
+}
+
+#how_it_works>p
+{
+    font-size: 20px;
+}
+
+#how_it_works .cards
+{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    margin: 4.5% 0px;
+}
+
+.card
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    width: 31%;
+    height: 430.07px;
+    padding: 61.5px;
+}
+
+.card img
+{
+    height: 100px;
+    width: auto;
+    margin-bottom: 40px;
+}
+
+.card p
+{
+    font-size: 16px;
+    padding-top: 10px
+}
+
+.card:nth-child(2)
+{
+    box-shadow: 24px 24px 48px 0px #0000000D;
+}
 
 /* Footer */
 
@@ -361,13 +425,26 @@ ul.nav-links li a.active
 
     /* Search Bar */
 
-    .search_container button img {
+    .search_container button img
+    {
         width: 50%;
     }
 
     .search_container button span
     {
         display: none;
+    }
+
+    /* How it works */
+
+    #how_it_works .card h3
+    {
+        font-size: inherit;
+    }
+
+    #how_it_works .card p
+    {
+        font-size: 17px;
     }
 }
 
@@ -485,7 +562,7 @@ ul.nav-links li a.active
 
     .intro p
     {
-        font-size: 1rem;
+        font-size: 1.5rem;
     }
 
     /* Search */
@@ -493,6 +570,32 @@ ul.nav-links li a.active
     .search_container
     {
         width: 100%;
+    }
+
+    /* How it works */
+
+    #how_it_works .cards
+    {
+        flex-wrap: wrap;
+        flex-direction: column;
+    }
+
+    .card
+    {
+        width: 100%;
+        padding: 30px;
+        margin-top: 30px;
+    }
+
+    .card h3
+    {
+        font-size: 42px;
+    }
+
+    .card p
+    {
+        font-size: 35px;
+        padding: 3.5px;
     }
 
     /* Footer */
