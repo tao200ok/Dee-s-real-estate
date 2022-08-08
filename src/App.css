@@ -118,7 +118,8 @@ ul.nav-links li a.active
     margin: 6.5% 8.68% 0px 8.68%;
 }
 
-#home>div
+#home>div,
+#why_us>div
 {
     width: 45%;
 }
@@ -171,7 +172,9 @@ ul.nav-links li a.active
 
 .intro .play_button img
 {
-    padding: 10px;
+    position: relative;
+    top: 2px;
+    left: 1px;
 }
 
 .hero_image
@@ -276,7 +279,7 @@ ul.nav-links li a.active
     padding: 2.5px;
 }
 
-/* Main content */
+/* Beginning of main content */
 
 section.content
 {
@@ -287,30 +290,31 @@ section.content
     margin: 0px 8.68% 0px 8.68%;
 }
 
-/* How it works */
-
-#how_it_works
+.content article
 {
-    margin: 6.5% 0px 0px 0px;
+    position: relative;
+    top: -65px;
+    margin: 15% 0px 0px 0px;
     text-align: center;
 }
 
-#how_it_works h2
+.content article h2
 {
-    font-size: 24px;
+    font-size: 28px;
     color: #0F298B;
 }
 
-#how_it_works>p
+.content article>p,
+.points>p
 {
     font-size: 20px;
 }
 
-#how_it_works .cards
+.cards
 {
+    width: 100%;
     display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
+    flex-flow: row nowrap;
     justify-content: space-between;
     margin: 4.5% 0px;
 }
@@ -323,27 +327,162 @@ section.content
     align-items: center;
     background-color: #fff;
     width: 31%;
-    height: 430.07px;
-    padding: 61.5px;
-}
-
-.card img
-{
-    height: 100px;
-    width: auto;
-    margin-bottom: 40px;
-}
-
-.card p
-{
-    font-size: 16px;
-    padding-top: 10px
 }
 
 .card:nth-child(2)
 {
     box-shadow: 24px 24px 48px 0px #0000000D;
 }
+
+/* How it works */
+
+#how_it_works .card
+{
+    padding: 61.5px;
+}
+
+#how_it_works .card img
+{
+    height: 100px;
+    width: auto;
+    margin-bottom: 40px;
+}
+
+#how_it_works .card p
+{
+    font-size: 16px;
+    padding-top: 10px
+}
+
+/* Why us */
+
+#why_us
+{
+    display: flex;
+    justify-content: space-between;
+    flex-flow: row-reverse wrap;
+    width: 100%;
+}
+
+#why_us .why_us_image img
+{
+    width: 100%;
+    height: auto;
+}
+
+.points
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
+}
+
+.points h2
+{
+    padding: 10px 0px;
+}
+
+.points p
+{
+    padding: 10px 0px;
+}
+
+.points ul
+{
+    list-style-type: none;
+    text-align: initial;
+    display: flex;
+    flex-flow: row wrap;
+}
+
+#why_us ul li
+{
+    display: flex;
+    align-items: center;
+    width: 50%;
+    padding: 2.5% 0px;
+    font-weight: 600;
+}
+
+#why_us ul li img
+{
+    margin-right: 10px;
+}
+
+/* Featured */
+
+#featured_properties .card
+{
+    padding: 20px;
+    padding-top: 10px;
+    border-radius: 0px 19.5px;
+}
+
+#featured_properties .card img
+{
+    width: 100%;
+}
+
+#featured_properties .card div
+{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+#featured_properties .card div:nth-child(2)
+{
+    padding-top: 15px;
+}
+
+#featured_properties h3
+{
+    font-size: 1.35rem;
+}
+
+#featured_properties .price
+{
+    color: #0F298B;
+    font-weight: 700;
+}
+
+/* Testimonials */
+
+#testimonials .card
+{
+    align-items: flex-start;
+    padding: 20px;
+    border-radius: 15px;
+}
+
+#testimonials .card h3
+{
+    font-weight: 700;
+    font-size: 1.4rem;
+}
+
+#testimonials .card span
+{
+    padding: 10px 0px;
+    font-weight: 600;
+}
+
+#testimonials p
+{
+    text-align: center;
+}
+
+#testimonials p:last-child
+{
+    text-align: initial;
+    opacity: 0.7;
+    font-size: 16px;
+}
+
+
+/* End of main content */
 
 /* Footer */
 
@@ -354,6 +493,7 @@ section.content
     justify-content: space-between;
     background-color: #0F298B;
     padding: 4.167% 8.68%;
+    margin-top: 10%;
     color: #fff;
     font-size: 0.95rem;
 }
@@ -433,18 +573,6 @@ section.content
     .search_container button span
     {
         display: none;
-    }
-
-    /* How it works */
-
-    #how_it_works .card h3
-    {
-        font-size: inherit;
-    }
-
-    #how_it_works .card p
-    {
-        font-size: 17px;
     }
 }
 
@@ -549,10 +677,11 @@ section.content
 
     /* Hero section */
 
-    #home>div
+    #home>div,
+    #why_us>div
     {
         width: 100%;
-        padding-bottom: 6.5%;
+        margin-bottom: 6.5%;
     }
 
     .intro h2
@@ -572,9 +701,26 @@ section.content
         width: 100%;
     }
 
-    /* How it works */
+    /* Beginning of main content  */
 
-    #how_it_works .cards
+    .content article
+    {
+        width: 100%;
+        margin-bottom: 6.5%;
+    }
+
+    .content article>p,
+    .points>p
+    {
+        font-size: medium;
+    }
+
+    .content article h2
+    {
+        font-size: larger;
+    }
+
+    .cards
     {
         flex-wrap: wrap;
         flex-direction: column;
@@ -587,16 +733,6 @@ section.content
         margin-top: 30px;
     }
 
-    .card h3
-    {
-        font-size: 42px;
-    }
-
-    .card p
-    {
-        font-size: 35px;
-        padding: 3.5px;
-    }
 
     /* Footer */
 
