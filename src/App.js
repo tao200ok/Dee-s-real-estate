@@ -126,44 +126,48 @@ function App() {
                     <article id='featured_properties'>
                         <h2>Featured Properties</h2>
                         <p>A few of our biggest products that have sold out the most.</p>
+                        <button className='see_more desktop'>View more</button>
                         <div className='cards'>
                             <div className='card'>
                                 <img src={thePalace} alt='a duplex building' />
                                 <div><h3>The Palace</h3><span>Duplex</span></div>
-                                <div><span>Lekki, phase 2</span><span className='price'>$2,000</span></div>
+                                <div><span>Asokoro, FCT</span><span className='price'>$35,941</span></div>
                             </div>
                             <div className='card'>
                                 <img src={ivyRory} alt='a duplex building' />
                                 <div><h3>Ivy Rory</h3><span>Duplex</span></div>
-                                <div><span>Lekki, phase 2</span><span className='price'>$2,000</span></div>
+                                <div><span>Katampe, FCT</span><span className='price'>$40,733</span></div>
                             </div>
                             <div className='card'>
                                 <img src={rexona} alt='a duplex building' />
                                 <div><h3>Rexona</h3><span>Duplex</span></div>
-                                <div><span>Lekki, phase 2</span><span className='price'>$2,000</span></div>
+                                <div><span>Jabi, FCT</span><span className='price'>$43,130</span></div>
                             </div>
                         </div>
+                        <button className='see_more mobile'>View more</button>
                     </article>
                     <article id='testimonials'>
                         <h2>Testimonials.</h2>
                         <p>What our clients are saying</p>
+                        <button className='see_more desktop'>View more</button>
                         <div className='cards'>
                             <div className='card'>
-                                <h3>Alex Godwin</h3>
-                                <span>South Africa</span>
+                                <h3>Adeyinka Godwin</h3>
+                                <span>Lagos</span>
                                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fames ut dictumst urna, lorem nibh. Pretium leo hendrerit interdum netus</p>
                             </div>
                             <div className='card'>
-                                <h3>Alex Godwin</h3>
-                                <span>South Africa</span>
+                                <h3>Alex Goodwill</h3>
+                                <span>Port Harcourt</span>
                                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fames ut dictumst urna, lorem nibh. Pretium leo hendrerit interdum netus</p>
                             </div>
                             <div className='card'>
-                                <h3>Alex Godwin</h3>
-                                <span>South Africa</span>
+                                <h3>Muhammad Abdullah</h3>
+                                <span>Mauritania</span>
                                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fames ut dictumst urna, lorem nibh. Pretium leo hendrerit interdum netus</p>
                             </div>
                         </div>
+                        <button className='see_more mobile'>View more</button>
                     </article>
                 </section>
             </main>
